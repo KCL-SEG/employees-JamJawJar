@@ -52,7 +52,7 @@ class BonusCommission(Commission):
         return(self.bonusAmount)
 
     def __str__(self):
-        return(f"recieves a bonus commission of {self.bonusAmount}")
+        return(f"receives a bonus commission of {self.bonusAmount}")
 
 class ContractCommission(Commission):
     def __init__(self, commissionPerContract, contractsLanded):
@@ -63,7 +63,7 @@ class ContractCommission(Commission):
         return(self.commissionPerContract * self.contractsLanded)
 
     def __str__(self):
-        return(f"recieves a commission for {self.contractsLanded} contract(s) at {self.commissionPerContract}/contract")
+        return(f"receives a commission for {self.contractsLanded} contract(s) at {self.commissionPerContract}/contract")
 
 
 
@@ -84,7 +84,7 @@ class Employee:
         if(str(self.commission) != "empty commission"):
             employeeString += f" and {str(self.commission)}"
         
-        employeeString += f".  Their total pay is {self.get_pay()}"
+        employeeString += f".  Their total pay is {self.get_pay()}."
 
         return(employeeString)
 
@@ -92,7 +92,6 @@ class Employee:
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie', SalaryContract(4000))
-print(str(billie))
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 charlie = Employee('Charlie', HourlyContract(25, 100))
